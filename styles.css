@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header .logo-img img {
+    max-width: 80px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    background-image: url('fotobanner.jpg.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+#hero .hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+#hero .btn {
+    background-color: #440473;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 200px; /* Ajuste de espaço entre o texto e o botão */
+    /* Para ajustar a localização do botão, você pode modificar a margem ou o padding abaixo: */
+    position: relative; /* Permite ajustar com top, left, etc. */
+    top: 150px; /* Aumente ou diminua para mover o botão verticalmente */
+    left: 200px; 
+}
+
+#hero .btn:hover {
+    background-color: #440473;
+    transform: translateY(-5px);
+}
+
+
+#hero .btn:hover {
+    background-color: #440473;
+    transform: translateY(-5px);
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #B22222;
+    margin-bottom: 1rem;
+}
+
+.propostas-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: #B22222;
+    margin-bottom: 0.5rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #B22222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #B22222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+/* ===============================
+   ESTILOS RESPONSIVOS - MEDIA QUERIES
+   =============================== */
+
+/* Para dispositivos com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column; /* Empilha o conteúdo no header em telas menores */
+        text-align: center;
+    }
+
+    header .logo h1 {
+        font-size: 1.8rem; /* Ajusta o tamanho do texto */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os links de navegação em telas menores */
+        gap: 1rem;
+    }
+
+    #hero {
+        height: 60vh; /* Reduz a altura da imagem de fundo */
+    }
+
+    #hero h2 {
+        font-size: 1.5rem; /* Ajusta o tamanho do texto */
+    }
+
+    #hero .btn {
+        padding: 0.8rem 1.5rem; /* Reduz o tamanho do botão */
+    }
+
+    .container {
+        padding: 1rem; /* Reduz o padding em dispositivos menores */
+    }
+
+    .propostas-cards {
+        grid-template-columns: 1fr; /* Cards em uma coluna para melhor visualização em telas pequenas */
+    }
+}
+
+/* Para dispositivos com largura máxima de 480px (celulares pequenos) */
+@media (max-width: 480px) {
+
+    header .logo h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho do logo */
+    }
+
+    #hero {
+        height: 50vh; /* Reduz mais a altura da imagem de fundo */
+    }
+
+    #hero h2 {
+        font-size: 1.3rem; /* Ajusta o tamanho do texto */
+    }
+
+    #hero p {
+        font-size: 1rem; /* Reduz o tamanho do parágrafo no hero */
+    }
+
+    .propostas-cards {
+        grid-template-columns: 1fr; /* Garante uma coluna em telas muito pequenas */
+    }
+
+    .card {
+        padding: 0.5rem; /* Reduz o padding dos cards */
+    }
+
+    footer {
+        padding: 0.5rem; /* Reduz o padding no rodapé */
+    }
+}
+
+/* Estilos padrão para os links do menu de navegação */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Mudança de cor ao passar o mouse */
+nav ul li a:hover {
+    color: #FF6347; /* Cor desejada ao passar o mouse (um tom de laranja, por exemplo) */
+}
+
+.propostas-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    overflow: hidden; /* Garante que nada saia dos limites do card */
+}
+
+.card img {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços em branco ao redor da imagem */
+    margin-bottom: 1rem; /* Espaçamento entre a imagem e o título */
+    border-radius: 5px; /* Cantos arredondados para a imagem */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom leve no card */
+}
+
+.card h3 {
+    color: #B22222;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #B22222;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #B22222;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card a:hover {
+    background-color: #B22222;
+    color: #fff;
+}
+footer {
+    background-color: #B22222;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 0.75rem; /* Aumenta o espaçamento entre ícones */
+    font-size: 2rem; /* Tamanho aumentado dos ícones */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FF6347; /* Cor dos ícones ao passar o mouse */
+}
+
+.social-icons i {
+    vertical-align: middle;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo para o menu responsivo */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#nav-menu {
+    display: flex;
+}
+
+/* Tornar o menu responsivo */
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 1rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+#hero {
+    background-image: url('fotobanner.jpg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .btn {
+    background-color: #440473;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #B22222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 2rem;
+}
+
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilos do cabeçalho e navegação */
+header {
+    background-color: #fbd304;
+    color: #440473;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #440473;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Menu hamburguer para mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#nav-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 1rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilo da seção hero */
+#hero {
+    background-image: url('fotobanner.jpg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Botão "Conheça as Propostas" */
+#hero .btn {
+    background-color: #FF6347;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    margin-top: 200px;
+    left: 200px;
+}
+
+#hero .btn:hover {
+    background-color: #440473;
+    transform: translateY(-5px);
+}
+
+/* Ajustes de responsividade para o botão */
+@media (max-width: 768px) {
+    #hero .btn {
+        padding: 0.8rem 1.5rem; /* Reduz o tamanho do botão */
+        font-size: 1rem; /* Reduz a fonte */
+        left: 0; /* Centraliza o botão */
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero .btn {
+        padding: 0.6rem 1.2rem; /* Ajuste ainda maior para telas menores */
+        font-size: 0.9rem; /* Redução do tamanho da fonte */
+        left: 0;
+        margin-top: 100px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #hero {
+        height: 50vh;
+    }
+
+    #hero .btn {
+        padding: 0.6rem 1.2rem; /* Ajuste ainda maior para telas menores */
+        font-size: 0.9rem; /* Ajuste do tamanho do texto no botão */
+    }
+}
+
+/* Estilos gerais */
+.container {
+    padding: 2rem;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #fbd304;
+    color: #440473;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 2rem;
+}
+
+/* Estilo para o elemento hero */
+#hero {
+    background-image: url('fotobanner.jpg.png');
+    background-size: cover;
+    background-position: left center; /* Alinha a imagem à esquerda */
+    color: white;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    #hero {
+        height: 60vh; /* Reduz a altura da imagem de fundo */
+        background-position: left center; /* Garante que a imagem continue alinhada à esquerda */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        height: 50vh; /* Reduz ainda mais a altura da imagem de fundo */
+        background-position: left center; /* Garante o alinhamento à esquerda */
+    }
+}
